@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/dribble-dashboard/static/css/main.4c8461e3.chunk.css",
-    "main.js": "/dribble-dashboard/static/js/main.10f4b0dd.chunk.js",
-    "main.js.map": "/dribble-dashboard/static/js/main.10f4b0dd.chunk.js.map",
+    "main.css": "/dribble-dashboard/static/css/main.ce8b9478.chunk.css",
+    "main.js": "/dribble-dashboard/static/js/main.4c7549d5.chunk.js",
+    "main.js.map": "/dribble-dashboard/static/js/main.4c7549d5.chunk.js.map",
     "runtime~main.js": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js",
     "runtime~main.js.map": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js.map",
-    "static/js/2.b41502e9.chunk.js": "/dribble-dashboard/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/dribble-dashboard/static/js/2.b41502e9.chunk.js.map",
+    "static/js/2.cf0d62a8.chunk.js": "/dribble-dashboard/static/js/2.cf0d62a8.chunk.js",
+    "static/js/2.cf0d62a8.chunk.js.map": "/dribble-dashboard/static/js/2.cf0d62a8.chunk.js.map",
     "index.html": "/dribble-dashboard/index.html",
-    "precache-manifest.46529880da2e54e375a1e5b369b04984.js": "/dribble-dashboard/precache-manifest.46529880da2e54e375a1e5b369b04984.js",
+    "precache-manifest.32901908685c798a73bf88205ef957db.js": "/dribble-dashboard/precache-manifest.32901908685c798a73bf88205ef957db.js",
     "service-worker.js": "/dribble-dashboard/service-worker.js",
-    "static/css/main.4c8461e3.chunk.css.map": "/dribble-dashboard/static/css/main.4c8461e3.chunk.css.map"
+    "static/css/main.ce8b9478.chunk.css.map": "/dribble-dashboard/static/css/main.ce8b9478.chunk.css.map"
   }
 }
