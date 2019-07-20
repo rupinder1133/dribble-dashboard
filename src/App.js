@@ -7,9 +7,9 @@ import Header from "./components/header/Header";
 const App = () => {
   return (
       <div className={styles.appContainer}>
-        <Header />
+        <NavBar />
         <div className={styles.mainContent}>
-          <NavBar />
+          <Header />
           <main>
             <Dashboard />
           </main>
