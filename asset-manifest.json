@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dribble-dashboard/static/css/main.14c7c1fe.chunk.css",
+    "main.js": "/dribble-dashboard/static/js/main.e15519dc.chunk.js",
+    "main.js.map": "/dribble-dashboard/static/js/main.e15519dc.chunk.js.map",
+    "runtime~main.js": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js",
+    "runtime~main.js.map": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js.map",
+    "static/js/2.3310f33a.chunk.js": "/dribble-dashboard/static/js/2.3310f33a.chunk.js",
+    "static/js/2.3310f33a.chunk.js.map": "/dribble-dashboard/static/js/2.3310f33a.chunk.js.map",
+    "index.html": "/dribble-dashboard/index.html",
+    "precache-manifest.8afc0d659cf60119d665b1efade23e99.js": "/dribble-dashboard/precache-manifest.8afc0d659cf60119d665b1efade23e99.js",
+    "service-worker.js": "/dribble-dashboard/service-worker.js",
+    "static/css/main.14c7c1fe.chunk.css.map": "/dribble-dashboard/static/css/main.14c7c1fe.chunk.css.map"
+  }
+}
