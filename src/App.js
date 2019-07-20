@@ -1,10 +1,10 @@
 import React from 'react';
 import Dashboard from "./pages/dashboard/Dashboard";
-import './app.css';
+import styles from './app.module.css';
 
 const App = () => {
   return (
-      <div className="appContainer">
+      <div className={styles.appContainer}>
         <main>
           <Dashboard />
         </main>
