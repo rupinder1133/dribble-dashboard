@@ -1,4 +1,4 @@
-See demo here : [**Demo**](https://rupinder1133.github.io/dribble-dashboard/)
+See demo here : <a href="https://rupinder1133.github.io/dribble-dashboard/" target="_blank">**Demo**</a>
 
 ## How to run
 
