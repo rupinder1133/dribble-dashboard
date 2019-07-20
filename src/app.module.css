@@ -1,3 +1,14 @@
 .appContainer {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContent {
+    display: flex;
+    flex: 1;
+}
+
+main {
+    flex: 1;
 }
