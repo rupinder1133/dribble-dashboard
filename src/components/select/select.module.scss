@@ -1,0 +1,51 @@
+@import '../../styles/styleVariables';
+
+$optionPadding: 8px;
+$borderRadius: 5px;
+
+.select {
+  position: relative;
+}
+
+.optionCommonStyle {
+  cursor: pointer;
+  background: transparent;
+  padding: $optionPadding;
+  width: 100%;
+  border: none;
+  text-align: left;
+
+  &:hover {
+    background-color: $componentBorder;
+  }
+}
+
+.placeholder {
+  @extend .optionCommonStyle;
+  border: solid 1px $componentBorder;
+  border-radius: $borderRadius;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.placeholderLabel {
+  margin: 0 10px;
+}
+
+.options {
+  position: absolute;
+  width: calc(100% - 2px);
+  left: 0;
+  top: 100%;
+  margin-top: 4px;
+  border-radius: $borderRadius;
+  border: solid 1px $componentBorder;
+  background-color: white;
+}
+
+.option {
+  @extend .optionCommonStyle;
+  display: block;
+  width: 100%;
+}
