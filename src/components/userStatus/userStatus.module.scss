@@ -1,0 +1,13 @@
+
+$size: 8px;
+
+.status {
+  height: $size;
+  width: $size;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+.online {
+  background: #38a849;
+}
