@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/dribble-dashboard/static/css/main.cc225727.chunk.css",
-    "main.js": "/dribble-dashboard/static/js/main.3b2d13f3.chunk.js",
-    "main.js.map": "/dribble-dashboard/static/js/main.3b2d13f3.chunk.js.map",
+    "main.css": "/dribble-dashboard/static/css/main.64b97005.chunk.css",
+    "main.js": "/dribble-dashboard/static/js/main.e1aadd0f.chunk.js",
+    "main.js.map": "/dribble-dashboard/static/js/main.e1aadd0f.chunk.js.map",
     "runtime~main.js": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js",
     "runtime~main.js.map": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js.map",
     "static/css/2.dafc907f.chunk.css": "/dribble-dashboard/static/css/2.dafc907f.chunk.css",
-    "static/js/2.1b26a4de.chunk.js": "/dribble-dashboard/static/js/2.1b26a4de.chunk.js",
-    "static/js/2.1b26a4de.chunk.js.map": "/dribble-dashboard/static/js/2.1b26a4de.chunk.js.map",
+    "static/js/2.f3181cd7.chunk.js": "/dribble-dashboard/static/js/2.f3181cd7.chunk.js",
+    "static/js/2.f3181cd7.chunk.js.map": "/dribble-dashboard/static/js/2.f3181cd7.chunk.js.map",
     "index.html": "/dribble-dashboard/index.html",
-    "precache-manifest.60b81b6fed4ab0c404620bd90ae00ad8.js": "/dribble-dashboard/precache-manifest.60b81b6fed4ab0c404620bd90ae00ad8.js",
+    "precache-manifest.ad6cbc7547d29df0ddbfc2a63e0360c5.js": "/dribble-dashboard/precache-manifest.ad6cbc7547d29df0ddbfc2a63e0360c5.js",
     "service-worker.js": "/dribble-dashboard/service-worker.js",
     "static/css/2.dafc907f.chunk.css.map": "/dribble-dashboard/static/css/2.dafc907f.chunk.css.map",
-    "static/css/main.cc225727.chunk.css.map": "/dribble-dashboard/static/css/main.cc225727.chunk.css.map",
-    "static/media/flag-icon.css": "/dribble-dashboard/static/media/zw.ad4ad36d.svg"
+    "static/css/main.64b97005.chunk.css.map": "/dribble-dashboard/static/css/main.64b97005.chunk.css.map",
+    "static/media/flag-icon.css": "/dribble-dashboard/static/media/zw.ad4ad36d.svg",
+    "static/media/profile.module.scss": "/dribble-dashboard/static/media/profile_pic.247889bf.png"
   }
 }
