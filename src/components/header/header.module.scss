@@ -1,0 +1,18 @@
+@import '../../styles/styleVariables.scss';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $headerHeight;
+  padding: 0 32px;
+  border-bottom: solid 1px $componentBorder;
+}
+
+.flagIcon {
+  margin-right: 10px;
+}
+
+.languageSelect {
+  width: 120px;
+}

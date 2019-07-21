@@ -1,0 +1,25 @@
+@import '../../styles/styleVariables';
+
+nav {
+  width: $navBarWidth;
+  border-right: solid 1px $componentBorder;
+}
+
+.home {
+  height: $headerHeight
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  & + & {
+    border-top: solid 1px $componentBorder;
+  }
+}
+
+.profile {
+
+}
