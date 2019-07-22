@@ -1,0 +1,63 @@
+@import '../../styles/styleVariables';
+
+$elementMargin: 10px;
+$iconSize: 16px;
+$labelMarginLeft: 10px;
+$headerFontSize: 14px;
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: $elementMargin;
+}
+
+.controlIcons {
+  display: flex;
+  flex-direction: column;
+  height: 22px;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.header {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+.headerIcon {
+  font-size: $iconSize;
+}
+
+.headerLabel {
+  margin-left: $labelMarginLeft;
+  font-size: $headerFontSize;
+}
+
+.options {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 500ms ease-out;
+
+  &.isOpen {
+    max-height: 100px;
+    display: block;
+  }
+}
+
+.option {
+  margin-left: calc(#{$iconSize} + #{$labelMarginLeft} + (#{$elementMargin} / 2));
+  font-size: calc(#{$headerFontSize} - 2px);
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+
+  & + & {
+    margin-top: $elementMargin;
+  }
+}
