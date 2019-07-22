@@ -1,6 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import {faColumns, faHome, faCalendar} from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faColumns,
+  faHome,
+  faInbox,
+  faReceipt,
+  faVial,
+} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import styles from './navBar.module.scss'
 import Profile from "../profile/Profile";
@@ -24,7 +31,30 @@ const navBarOptions = [
       icon: faCalendar,
       label: 'Calender',
     },
-  }
+  },
+  {
+    header: {
+      icon: faInbox,
+      label: 'Inbox',
+    },
+    options: [
+      {label: 'Starred'},
+      {label: 'Others'},
+    ]
+
+  },
+  {
+    header: {
+      icon: faReceipt,
+      label: 'Invoicing',
+    },
+  },
+  {
+    header: {
+      icon: faVial,
+      label: 'Lab / Experimental',
+    },
+  },
 ];
 
 const NavBar = () => {

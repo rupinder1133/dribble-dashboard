@@ -26,10 +26,15 @@ $headerFontSize: 14px;
   align-items: center;
   cursor: pointer;
   border: none;
+
+  &:hover {
+    font-weight: $fontHeavy;
+  }
 }
 
 .headerIcon {
   font-size: $iconSize;
+  width: $iconSize !important;
 }
 
 .headerLabel {
@@ -38,26 +43,27 @@ $headerFontSize: 14px;
 }
 
 .options {
-  display: none;
+  display: block;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 500ms ease-out;
+  transition: max-height 300ms ease-out;
 
   &.isOpen {
     max-height: 100px;
-    display: block;
   }
 }
 
 .option {
-  margin-left: calc(#{$iconSize} + #{$labelMarginLeft} + (#{$elementMargin} / 2));
+  margin-left: calc(#{$iconSize} + #{$labelMarginLeft});
   font-size: calc(#{$headerFontSize} - 2px);
   background: transparent;
   border: none;
   text-align: left;
   cursor: pointer;
+  display: block;
+  margin-top: $elementMargin;
 
-  & + & {
-    margin-top: $elementMargin;
+  &:hover {
+    font-weight: $fontHeavy;
   }
 }
