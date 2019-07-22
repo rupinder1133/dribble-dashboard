@@ -64,7 +64,7 @@ const NavBar = () => {
         <div className={classNames(styles.option)}><Profile/></div>
         {
           navBarOptions.map(option => (
-              <div className={classNames(styles.option)} key={option.header.label}>
+              <div className={classNames(styles.option, styles.secondaryOption)} key={option.header.label}>
                 <Accordion {...option}/>
               </div>
           ))

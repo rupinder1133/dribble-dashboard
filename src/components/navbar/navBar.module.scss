@@ -14,10 +14,15 @@ nav {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  border-bottom: solid 1px $componentBorder;
 
-  & + & {
-    border-top: solid 1px $componentBorder;
+  &:last-child {
+    border-bottom: none;
   }
+}
+
+.secondaryOption {
+  margin: 0 28px;
 }
 
 .profile {
