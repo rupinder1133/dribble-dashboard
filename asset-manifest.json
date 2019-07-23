@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dribble-dashboard/static/css/main.999b2ec6.chunk.css",
+    "main.css": "/dribble-dashboard/static/css/main.29a4ffac.chunk.css",
     "main.js": "/dribble-dashboard/static/js/main.8fdba265.chunk.js",
     "main.js.map": "/dribble-dashboard/static/js/main.8fdba265.chunk.js.map",
     "runtime~main.js": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js",
@@ -9,10 +9,10 @@
     "static/js/2.18712aa7.chunk.js": "/dribble-dashboard/static/js/2.18712aa7.chunk.js",
     "static/js/2.18712aa7.chunk.js.map": "/dribble-dashboard/static/js/2.18712aa7.chunk.js.map",
     "index.html": "/dribble-dashboard/index.html",
-    "precache-manifest.46dbc377938b4dfe90e75440c7c17d7e.js": "/dribble-dashboard/precache-manifest.46dbc377938b4dfe90e75440c7c17d7e.js",
+    "precache-manifest.a946768720ee56af6e2d9d9174f29d13.js": "/dribble-dashboard/precache-manifest.a946768720ee56af6e2d9d9174f29d13.js",
     "service-worker.js": "/dribble-dashboard/service-worker.js",
     "static/css/2.37490dfb.chunk.css.map": "/dribble-dashboard/static/css/2.37490dfb.chunk.css.map",
-    "static/css/main.999b2ec6.chunk.css.map": "/dribble-dashboard/static/css/main.999b2ec6.chunk.css.map",
+    "static/css/main.29a4ffac.chunk.css.map": "/dribble-dashboard/static/css/main.29a4ffac.chunk.css.map",
     "static/media/flag-icon.css": "/dribble-dashboard/static/media/zw.ad4ad36d.svg",
     "static/media/profile.module.scss": "/dribble-dashboard/static/media/profile_pic.247889bf.png"
   }
