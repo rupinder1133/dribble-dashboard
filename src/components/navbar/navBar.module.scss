@@ -3,6 +3,8 @@
 nav {
   width: $navBarWidth;
   border-right: solid 1px $componentBorder;
+  display: flex;
+  flex-direction: column;
 }
 
 .home {
@@ -23,8 +25,10 @@ nav {
 
 .secondaryOption {
   margin: 0 28px;
+  font-size: 14px;
 }
 
-.profile {
-
+.scrollable {
+  flex: 1;
+  overflow: auto;
 }
