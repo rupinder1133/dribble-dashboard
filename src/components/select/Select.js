@@ -14,7 +14,25 @@ class Select extends Component {
 
   toggleOpen = () => {
     const {isOpen} = this.state;
-    this.setState({isOpen: !isOpen});
+    this.setState({isOpen: !isOpen}, () => {
+      if(this.state.isOpen){
+        document.addEventListener('click', this.handleOutsideClick);
+        document.addEventListener('keydown', this.handleEsc);
+      } else {
+        document.removeEventListener('click', this.handleOutsideClick);
+        document.removeEventListener('keydown', this.handleEsc);
+      }
+    });
+  };
+
+  handleOutsideClick = (e) => {
+    this.toggleOpen(e);
+  };
+
+  handleEsc = (e) => {
+    if(e.key === 'Escape') {
+      this.toggleOpen(e)
+    }
   };
 
   selectOption = (e, index) => {
