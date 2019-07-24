@@ -54,7 +54,9 @@ const navBarOptions = [
 const NavBar = () => {
   return (
       <nav>
-        <div className={classNames(styles.home, styles.option)}><FontAwesomeIcon icon={faHome}/></div>
+        <button className={classNames(styles.home, styles.option)}>
+          <FontAwesomeIcon icon={faHome}/>
+        </button>
         <div className={classNames(styles.option)}><Profile/></div>
         <div className={styles.scrollable}>
           {

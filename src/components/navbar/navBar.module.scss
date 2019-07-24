@@ -8,7 +8,11 @@ nav {
 }
 
 .home {
-  height: $headerHeight
+  height: $headerHeight;
+  color: $spanishGray;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
 }
 
 .option {
