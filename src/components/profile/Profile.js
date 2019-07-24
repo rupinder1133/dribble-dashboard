@@ -8,9 +8,9 @@ import UserStatus from "../userStatus/UserStatus";
 const Profile = () => (
     <div className={styles.profile}>
       <div className={classNames(styles.image, styles.profileElements)}>
-        <div className={styles.settings}>
+        <button className={styles.settings}>
           <FontAwesomeIcon icon={faCog}/>
-        </div>
+        </button>
       </div>
       <div className={classNames(styles.name, styles.profileElements)}>
         <strong>Martha Blair</strong>
