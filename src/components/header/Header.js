@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './header.module.scss';
-import Select from "../select/Select";
+import Dropdown from "../dropdown/Dropdown";
 import FlagIcon from "../flagIcon/FlagIcon";
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
   return (
       <header>
         <strong>Dashboard</strong>
-        <Select
+        <Dropdown
             options={languageOptions}
             className={styles.languageSelect}
         />

@@ -2,11 +2,20 @@ import React, {Component} from 'react';
 import * as PropTypes from "prop-types";
 import classNames from 'classnames';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faAngleDown, faAngleUp} from '@fortawesome/free-solid-svg-icons'
+import {faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons'
 
-import styles from './select.module.scss';
+import styles from './dropdown.module.scss';
 
-class Select extends Component {
+const closedIcon = <div className={styles.controlIcons}>
+  <FontAwesomeIcon icon={faCaretUp}/>
+  <FontAwesomeIcon icon={faCaretDown}/>
+</div>;
+
+const openIcon = <div className={styles.controlIcons}>
+  <FontAwesomeIcon icon={faCaretDown}/>
+</div>;
+
+class Dropdown extends Component {
   state = {
     isOpen: false,
     selectedOptionIndex: 0,
@@ -15,7 +24,7 @@ class Select extends Component {
   toggleOpen = () => {
     const {isOpen} = this.state;
     this.setState({isOpen: !isOpen}, () => {
-      if(this.state.isOpen){
+      if (this.state.isOpen) {
         document.addEventListener('click', this.handleOutsideClick);
         document.addEventListener('keydown', this.handleEsc);
       } else {
@@ -30,7 +39,7 @@ class Select extends Component {
   };
 
   handleEsc = (e) => {
-    if(e.key === 'Escape') {
+    if (e.key === 'Escape') {
       this.toggleOpen(e)
     }
   };
@@ -66,7 +75,7 @@ class Select extends Component {
               onClick={this.toggleOpen}
           >
             <div className={styles.placeholderLabel}>{effectivePlaceholder}</div>
-            <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleUp}/>
+            {isOpen ? openIcon : closedIcon}
           </button>
           <If condition={isOpen}>
             <div className={classNames(styles.options)}>
@@ -86,11 +95,11 @@ class Select extends Component {
   }
 }
 
-Select.propTypes = {
+Dropdown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
     label: PropTypes.node,
   })),
 };
 
-export default Select;
+export default Dropdown;
