@@ -2,7 +2,7 @@
 
 nav {
   width: $navBarWidth;
-  border-right: solid 1px $componentBorder;
+  border-right: solid 1px $platinum;
   display: flex;
   flex-direction: column;
 }
@@ -16,7 +16,7 @@ nav {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  border-bottom: solid 1px $componentBorder;
+  border-bottom: solid 1px $platinum;
 
   &:last-child {
     border-bottom: none;

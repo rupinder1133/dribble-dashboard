@@ -16,13 +16,13 @@ $borderRadius: 5px;
   text-align: left;
 
   &:hover {
-    background-color: $componentBorder;
+    background-color: $platinum;
   }
 }
 
 .placeholder {
   @extend .optionCommonStyle;
-  border: solid 1px $componentBorder;
+  border: solid 1px $platinum;
   border-radius: $borderRadius;
   display: flex;
   justify-content: space-between;
@@ -40,7 +40,7 @@ $borderRadius: 5px;
   top: 100%;
   margin-top: 4px;
   border-radius: $borderRadius;
-  border: solid 1px $componentBorder;
+  border: solid 1px $platinum;
   background-color: white;
 }
 
