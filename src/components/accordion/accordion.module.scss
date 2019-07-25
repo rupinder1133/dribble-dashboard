@@ -1,6 +1,6 @@
 @import '../../styles/styleVariables';
 
-$elementMargin: 16px;
+$elementMargin: 12px;
 $iconSize: 16px;
 $labelMarginLeft: 10px;
 $headerFontSize: 14px;
@@ -16,21 +16,10 @@ $headerFontSize: 14px;
   display: flex;
   flex-direction: column;
   height: 22px;
+  font-size: 10px;
+  color: $spanishGray;
   justify-content: center;
   margin-left: auto;
-}
-
-.header {
-  background: transparent;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-
-  &:hover {
-    font-weight: $fontHeavy;
-  }
 }
 
 .headerIcon {
@@ -44,27 +33,44 @@ $headerFontSize: 14px;
 }
 
 .options {
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   max-height: 0;
   transition: max-height 300ms ease-out;
+  visibility: hidden;
 
   &.isOpen {
     max-height: 100px;
+  }
+
+  &.isContentVisible {
+    visibility: visible;
   }
 }
 
 .option {
   margin-left: calc(#{$iconSize} + #{$labelMarginLeft});
   font-size: calc(#{$headerFontSize} - 2px);
-  background: transparent;
-  border: none;
   text-align: left;
-  cursor: pointer;
-  display: block;
   margin-top: $elementMargin;
 
   &:hover {
     font-weight: $fontHeavy;
+    color: $brightNavyBlue;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  &.isOpen {
+    font-weight: $fontHeavy;
+
+    .headerIcon {
+      color: $brightNavyBlue;
+    }
   }
 }

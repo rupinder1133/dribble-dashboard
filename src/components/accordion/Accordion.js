@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCaretDown, faCaretUp} from "@fortawesome/free-solid-svg-icons";
 import styles from './accordion.module.scss';
+import Button from "../button/Button";
 
 const closedIcon = <div className={styles.controlIcons}>
   <FontAwesomeIcon icon={faCaretUp}/>
@@ -17,25 +18,36 @@ const openIcon = <div className={styles.controlIcons}>
 class Accordion extends Component {
   state = {
     isOpen: false,
+    isContentVisible: false,
   };
 
   componentDidMount() {
-    this.setState({isOpen: !!this.props.header.isOpen});
+    this.setState({
+      isOpen: !!this.props.header.isOpen,
+      isContentVisible: !!this.props.header.isOpen,
+    });
   }
 
   toggleOpen = () => {
     const {isOpen} = this.state;
     this.setState({isOpen: !isOpen});
+    if(isOpen){
+      setTimeout(() => this.setState({ isContentVisible: !isOpen }), 300);
+    } else {
+      this.setState({ isContentVisible: !isOpen });
+    }
   };
 
   render() {
     const {header, options} = this.props;
-    const {isOpen} = this.state;
+    const {isOpen, isContentVisible} = this.state;
 
     return (
         <div className={styles.container}>
-          <button
-              className={styles.header}
+          <Button
+              className={classNames(styles.option, styles.header, {
+                [styles.isOpen]: isOpen,
+              })}
               onClick={this.toggleOpen}
           >
             <FontAwesomeIcon
@@ -46,12 +58,15 @@ class Accordion extends Component {
             <If condition={options}>
               {isOpen ? openIcon : closedIcon}
             </If>
-          </button>
+          </Button>
           <If condition={options}>
-            <div className={classNames(styles.options, {[styles.isOpen]: isOpen})}>
+            <div className={classNames(styles.options, {
+              [styles.isOpen]: isOpen,
+              [styles.isContentVisible]: isContentVisible,
+            })}>
               {
                 options.map(option => (
-                    <button key={option.label} className={styles.option}>{option.label}</button>
+                    <Button key={option.label} className={styles.option}>{option.label}</Button>
                 ))
               }
             </div>
