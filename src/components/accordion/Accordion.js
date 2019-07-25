@@ -29,6 +29,10 @@ class Accordion extends Component {
   }
 
   toggleOpen = () => {
+    if(!this.props.options) {
+      return;
+    }
+
     const {isOpen} = this.state;
     this.setState({isOpen: !isOpen});
     if(isOpen){
