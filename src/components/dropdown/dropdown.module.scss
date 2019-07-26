@@ -8,20 +8,14 @@ $borderRadius: 5px;
 }
 
 .optionCommonStyle {
-  cursor: pointer;
-  background: transparent;
   padding: $optionPadding;
   width: 100%;
-  border: none;
   text-align: left;
-
-  &:hover {
-    background-color: $platinum;
-  }
 }
 
 .placeholder {
   @extend .optionCommonStyle;
+
   border: solid 1px $platinum;
   border-radius: $borderRadius;
   display: flex;

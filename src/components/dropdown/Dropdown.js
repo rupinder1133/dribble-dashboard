@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons'
 
+import Button from "../button/Button";
 import styles from './dropdown.module.scss';
 
 const closedIcon = <div className={styles.controlIcons}>
@@ -70,23 +71,23 @@ class Dropdown extends Component {
 
     return (
         <div className={classNames(styles.select, className)}>
-          <button
+          <Button
               className={styles.placeholder}
               onClick={this.toggleOpen}
           >
             <div className={styles.placeholderLabel}>{effectivePlaceholder}</div>
             {isOpen ? openIcon : closedIcon}
-          </button>
+          </Button>
           <If condition={isOpen}>
             <div className={classNames(styles.options)}>
               {options.map((option, index) =>
-                  <button
+                  <Button
                       key={option.value}
                       className={styles.option}
                       onClick={(e) => this.selectOption(e, index)}
                   >
                     {option.label}
-                  </button>
+                  </Button>
               )}
             </div>
           </If>
