@@ -2,6 +2,7 @@
 
 .container {
   margin: 16px 0;
+  width: 100%;
 }
 
 .header {
@@ -11,17 +12,17 @@
 
 .option {
   margin-top: 10px;
-  background: transparent;
-  border: none;
   text-align: left;
-  padding: 6px 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
+  padding-left: 0;
+  padding-right: 0;
+  color: $arsenic;
 
   &:hover {
     font-weight: $fontHeavy;
+    color: $brightNavyBlue;
   }
 }
