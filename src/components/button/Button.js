@@ -44,6 +44,7 @@ class Button extends Component {
 
 Button.propTypes = {
   className: PropTypes.string,
+  onFocusClassName: PropTypes.string,
 };
 
 export default Button;
