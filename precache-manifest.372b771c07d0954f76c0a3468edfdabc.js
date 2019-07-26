@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "421ca40c1cd2f52dff227b21d94944e3",
+    "revision": "252284a1f2ac982f36a76672a123367a",
     "url": "/dribble-dashboard/index.html"
   },
   {
-    "revision": "5568d8cc62f554672464",
+    "revision": "8122ee7d71c97849f202",
     "url": "/dribble-dashboard/static/css/2.37490dfb.chunk.css"
   },
   {
-    "revision": "f197fea5f98e123ab9f4",
-    "url": "/dribble-dashboard/static/css/main.40cd66fc.chunk.css"
+    "revision": "477bc2805062cb994ebc",
+    "url": "/dribble-dashboard/static/css/main.c597748e.chunk.css"
   },
   {
-    "revision": "5568d8cc62f554672464",
-    "url": "/dribble-dashboard/static/js/2.94127a00.chunk.js"
+    "revision": "8122ee7d71c97849f202",
+    "url": "/dribble-dashboard/static/js/2.21dac02e.chunk.js"
   },
   {
-    "revision": "f197fea5f98e123ab9f4",
-    "url": "/dribble-dashboard/static/js/main.c970ea6b.chunk.js"
+    "revision": "477bc2805062cb994ebc",
+    "url": "/dribble-dashboard/static/js/main.21ba90e0.chunk.js"
   },
   {
     "revision": "48d9490ec1e8d4443b78",
