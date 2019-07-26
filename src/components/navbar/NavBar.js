@@ -2,10 +2,12 @@ import React from 'react';
 import classNames from 'classnames';
 import {faCalendar, faColumns, faHome, faInbox, faReceipt, faVial,} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import styles from './navBar.module.scss'
 import Profile from "../profile/Profile";
 import Accordion from "../accordion/Accordion";
 import RecentlyViewed from "../recentlyViewed/RecentlyViewed";
+
+import Button from "../button/Button";
+import styles from './navBar.module.scss'
 
 const navBarOptions = [
   {
@@ -54,9 +56,9 @@ const navBarOptions = [
 const NavBar = () => {
   return (
       <nav>
-        <button className={classNames(styles.home, styles.option)}>
+        <Button className={classNames(styles.home, styles.option)}>
           <FontAwesomeIcon icon={faHome}/>
-        </button>
+        </Button>
         <div className={classNames(styles.option)}><Profile/></div>
         <div className={styles.scrollable}>
           {

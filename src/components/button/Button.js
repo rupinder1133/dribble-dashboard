@@ -17,17 +17,18 @@ class Button extends Component {
   };
 
   render() {
-    const {children, className, onClick} = this.props;
+    const {children, className, onClick, onFocusClassName} = this.props;
     const {inFocus} = this.state;
 
     return (
         <button
             className={classNames(
                 styles.button,
+                className,
                 {
-                  [styles.btnFocus]: inFocus
+                  [styles.btnFocus]: inFocus,
+                  [onFocusClassName]: inFocus,
                 },
-                className
             )}
             onFocus={this.onFocus}
             onBlur={this.onBlur}

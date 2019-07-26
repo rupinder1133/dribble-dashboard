@@ -1,16 +1,18 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './profile.module.scss';
 import {faCog} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import UserStatus from "../userStatus/UserStatus";
 
+import Button from "../button/Button";
+import styles from './profile.module.scss';
+
 const Profile = () => (
     <div className={styles.profile}>
       <div className={classNames(styles.image, styles.profileElements)}>
-        <button className={styles.settings}>
+        <Button className={styles.settings} onFocusClassName={styles.settingsOnFocus}>
           <FontAwesomeIcon icon={faCog}/>
-        </button>
+        </Button>
       </div>
       <div className={classNames(styles.name, styles.profileElements)}>
         <strong>Martha Blair</strong>

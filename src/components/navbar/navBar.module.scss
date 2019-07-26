@@ -10,9 +10,6 @@ nav {
 .home {
   height: $headerHeight;
   color: $spanishGray;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
 }
 
 .option {
@@ -21,6 +18,7 @@ nav {
   justify-content: center;
   box-sizing: border-box;
   border-bottom: solid 1px $platinum;
+  border-radius: 0;
 
   &:last-child {
     border-bottom: none;

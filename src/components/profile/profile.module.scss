@@ -40,13 +40,16 @@
 
 .settings {
   background: white;
-  color: #a0a1a6;
+  color: $spanishGray;
   border-radius: 50px;
-  padding: 3px;
+  padding: 3px 4px;
   display: inline-block;
   position: absolute;
   right: -6px;
   bottom: -6px;
-  cursor: pointer;
-  border: none;
+}
+
+.settingsOnFocus {
+  padding: 2px 3px;
+  background-color: $snow;
 }
