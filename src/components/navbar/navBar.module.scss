@@ -2,6 +2,9 @@
 
 nav {
   width: $navBarWidth;
+  @media screen and (min-width: 1050px) {
+    width: $navBarWidthLarge;
+  }
   border-right: solid 1px $platinum;
   display: flex;
   flex-direction: column;
