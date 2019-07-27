@@ -29,17 +29,18 @@ class Accordion extends Component {
   }
 
   toggleOpen = () => {
-    if(!this.props.options) {
+    if (!this.props.options) {
       return;
     }
 
     const {isOpen} = this.state;
-    this.setState({isOpen: !isOpen});
-    if(isOpen){
-      setTimeout(() => this.setState({ isContentVisible: !isOpen }), 300);
-    } else {
-      this.setState({ isContentVisible: !isOpen });
-    }
+
+    this.setState({isOpen: !isOpen, isContentVisible: true});
+  };
+
+  toggleContentVisibility = () => {
+    const {isOpen} = this.state;
+    this.setState({isContentVisible: isOpen});
   };
 
   render() {
@@ -67,7 +68,9 @@ class Accordion extends Component {
             <div className={classNames(styles.options, {
               [styles.isOpen]: isOpen,
               [styles.isContentVisible]: isContentVisible,
-            })}>
+            })}
+                 onTransitionEnd={this.toggleContentVisibility}
+            >
               {
                 options.map(option => (
                     <Button key={option.label} className={styles.option}>{option.label}</Button>
