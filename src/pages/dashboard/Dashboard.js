@@ -1,5 +1,6 @@
 import React from 'react';
 import {Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
+import classNames from 'classnames';
 import Widget from "../../components/widget/Widget";
 import styles from './dashboard.module.scss';
 import Dropdown from "../../components/dropdown/Dropdown";
@@ -41,8 +42,16 @@ const Dashboard = () => {
           <div className={styles.header}>
             <strong>Daily Visitors</strong>
             <div className={styles.filterOptions}>
-              <Dropdown options={months} selectedValue={months[11].value} className={styles.months}/>
-              <Dropdown options={years} selectedValue={years[2].value}/>
+              <Dropdown
+                  options={months}
+                  selectedValue={months[11].value}
+                  className={classNames(styles.filter, styles.months)}
+              />
+              <Dropdown
+                  options={years}
+                  selectedValue={years[2].value}
+                  className={classNames(styles.filter)}
+              />
             </div>
           </div>
           <div className={styles.chartContainer}>

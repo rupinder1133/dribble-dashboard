@@ -5,6 +5,7 @@ $borderRadius: 5px;
 
 .select {
   position: relative;
+  border-radius: $borderRadius;
 }
 
 .optionCommonStyle {
@@ -36,12 +37,17 @@ $borderRadius: 5px;
   border-radius: $borderRadius;
   border: solid 1px $platinum;
   background-color: white;
+  z-index: 999;
 }
 
 .option {
   @extend .optionCommonStyle;
   display: block;
   width: 100%;
+
+  &:hover {
+    background-color: $platinum;
+  }
 }
 
 .controlIcons {
