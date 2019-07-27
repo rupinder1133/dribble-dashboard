@@ -17,10 +17,17 @@ const openIcon = <div className={styles.controlIcons}>
 </div>;
 
 class Dropdown extends Component {
-  state = {
-    isOpen: false,
-    selectedOptionIndex: 0,
-  };
+  constructor(props) {
+    super(props);
+
+    const mayBeSelectedOptionIndex = props.options.findIndex(o => o.value === props.selectedValue);
+    const selectedOptionIndex = mayBeSelectedOptionIndex === -1 ? 0 : mayBeSelectedOptionIndex;
+
+    this.state = {
+      isOpen: false,
+      selectedOptionIndex,
+    };
+  }
 
   toggleOpen = () => {
     const {isOpen} = this.state;
@@ -101,6 +108,7 @@ Dropdown.propTypes = {
     value: PropTypes.string,
     label: PropTypes.node,
   })),
+  selectedValue: PropTypes.string,
 };
 
 export default Dropdown;
