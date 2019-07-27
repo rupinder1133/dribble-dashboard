@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dribble-dashboard/static/css/main.b6228aa8.chunk.css",
-    "main.js": "/dribble-dashboard/static/js/main.befd69d5.chunk.js",
-    "main.js.map": "/dribble-dashboard/static/js/main.befd69d5.chunk.js.map",
+    "main.css": "/dribble-dashboard/static/css/main.9018c0d0.chunk.css",
+    "main.js": "/dribble-dashboard/static/js/main.1b5a91c6.chunk.js",
+    "main.js.map": "/dribble-dashboard/static/js/main.1b5a91c6.chunk.js.map",
     "runtime~main.js": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js",
     "runtime~main.js.map": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js.map",
-    "static/css/2.37490dfb.chunk.css": "/dribble-dashboard/static/css/2.37490dfb.chunk.css",
-    "static/js/2.21dac02e.chunk.js": "/dribble-dashboard/static/js/2.21dac02e.chunk.js",
-    "static/js/2.21dac02e.chunk.js.map": "/dribble-dashboard/static/js/2.21dac02e.chunk.js.map",
+    "static/css/2.dbbda6ad.chunk.css": "/dribble-dashboard/static/css/2.dbbda6ad.chunk.css",
+    "static/js/2.1dab436d.chunk.js": "/dribble-dashboard/static/js/2.1dab436d.chunk.js",
+    "static/js/2.1dab436d.chunk.js.map": "/dribble-dashboard/static/js/2.1dab436d.chunk.js.map",
     "index.html": "/dribble-dashboard/index.html",
-    "precache-manifest.0231d71d4df1261022adecbf77e81875.js": "/dribble-dashboard/precache-manifest.0231d71d4df1261022adecbf77e81875.js",
+    "precache-manifest.32d99dd4d6b440f4e9dabbcdb07c0c25.js": "/dribble-dashboard/precache-manifest.32d99dd4d6b440f4e9dabbcdb07c0c25.js",
     "service-worker.js": "/dribble-dashboard/service-worker.js",
-    "static/css/2.37490dfb.chunk.css.map": "/dribble-dashboard/static/css/2.37490dfb.chunk.css.map",
-    "static/css/main.b6228aa8.chunk.css.map": "/dribble-dashboard/static/css/main.b6228aa8.chunk.css.map",
+    "static/css/2.dbbda6ad.chunk.css.map": "/dribble-dashboard/static/css/2.dbbda6ad.chunk.css.map",
+    "static/css/main.9018c0d0.chunk.css.map": "/dribble-dashboard/static/css/main.9018c0d0.chunk.css.map",
     "static/media/flag-icon.css": "/dribble-dashboard/static/media/zw.ad4ad36d.svg",
     "static/media/profile.module.scss": "/dribble-dashboard/static/media/profile_pic.247889bf.png"
   }
