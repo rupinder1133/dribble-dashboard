@@ -1,13 +1,14 @@
 @import '../../styles/styleVariables';
 
 .headerWidget {
-  padding: 20px;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
+  border-bottom: solid 1px $platinum;
 }
 
 .filterOptions {
@@ -18,4 +19,16 @@
 
 .months {
   margin-right: 20px;
+}
+
+.chartContainer {
+  padding: 20px;
+}
+
+:global(.dailyVisitorsChartContainer .recharts-cartesian-grid-horizontal line:nth-last-child(2)) {
+  stroke-opacity: 0 !important;
+}
+
+.font {
+  stroke: red;
 }
