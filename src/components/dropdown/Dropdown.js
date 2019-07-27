@@ -109,6 +109,7 @@ Dropdown.propTypes = {
     label: PropTypes.node,
   })),
   selectedValue: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Dropdown;
