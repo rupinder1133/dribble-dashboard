@@ -1,0 +1,8 @@
+@import '../../styles/styleVariables';
+
+.container {
+  border: solid 1px $platinum;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: $boxShadow;
+}

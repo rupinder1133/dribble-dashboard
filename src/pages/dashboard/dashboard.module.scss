@@ -1,0 +1,21 @@
+@import '../../styles/styleVariables';
+
+.headerWidget {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filterOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.months {
+  margin-right: 20px;
+}
