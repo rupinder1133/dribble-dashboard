@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import classNames from 'classnames';
 import Widget from "../../components/widget/Widget";
 import styles from './dashboard.module.scss';
@@ -32,38 +32,49 @@ const data = [...Array(31)].map((e, index) => ({
   y: Math.round(Math.random() * (8500 - 1500) + 1500),
 }));
 
-const Dashboard = () => {
-  return (
-      <div>
-        <Widget className={styles.headerWidget}>
-          <div className={styles.header}>
-            <strong>Daily Visitors</strong>
-            <div className={styles.filterOptions}>
-              <Dropdown
-                  options={months}
-                  selectedValue={months[11].value}
-                  className={classNames(styles.filter, styles.months)}
-              />
-              <Dropdown
-                  options={years}
-                  selectedValue={years[2].value}
-                  className={classNames(styles.filter)}
+class Dashboard extends Component {
+  state = {
+    selectedMonth: 11,
+    selectedYear: 2,
+  };
+
+  render() {
+    const {selectedMonth, selectedYear} = this.state;
+
+    return (
+        <div>
+          <Widget className={styles.headerWidget}>
+            <div className={styles.header}>
+              <strong>Daily Visitors</strong>
+              <div className={styles.filterOptions}>
+                <Dropdown
+                    options={months}
+                    selectedValue={months[selectedMonth].value}
+                    className={classNames(styles.filter, styles.months)}
+                    onClick={(value, index) => this.setState({ selectedMonth: index})}
+                />
+                <Dropdown
+                    options={years}
+                    selectedValue={years[2].value}
+                    className={classNames(styles.filter)}
+                    onClick={(value, index) => this.setState({ selectedYear: index})}
+                />
+              </div>
+            </div>
+            <div className={styles.chartContainer}>
+              <DailyVisitorsChart
+                  data={data}
+                  month={months[selectedMonth].label}
+                  year={years[selectedYear].label}
+                  height={200}
+                  ticks={[0, 3000, 6000, 9000]}
+                  domain={[0, 9000]}
               />
             </div>
-          </div>
-          <div className={styles.chartContainer}>
-            <DailyVisitorsChart
-                data={data}
-                month="December"
-                year="2018"
-                height={200}
-                ticks={[0, 3000, 6000, 9000]}
-                domain={[0, 9000]}
-            />
-          </div>
-        </Widget>
-      </div>
-  )
-};
+          </Widget>
+        </div>
+    )
+  }
+}
 
 export default Dashboard;

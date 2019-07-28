@@ -74,7 +74,7 @@ class Dropdown extends Component {
     } = this.props;
 
     this.setState({selectedOptionIndex: index}, this.toggleOpen);
-    onClick && onClick(e, options[index]);
+    onClick && onClick(options[index].value, index);
   };
 
   render() {
