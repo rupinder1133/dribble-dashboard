@@ -32,3 +32,8 @@
 :global(.dailyVisitorsChartContainer .recharts-cartesian-grid-horizontal line:nth-last-child(2)) {
   stroke-opacity: 0;
 }
+
+:global(.recharts-bar-rectangle path:hover) {
+  fill: #1A56AD;
+  stroke: #0039A7;
+}
