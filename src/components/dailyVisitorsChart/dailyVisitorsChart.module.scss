@@ -1,0 +1,38 @@
+@import '../../styles/styleVariables';
+
+:global(.dailyVisitorsChart .recharts-bar-rectangle path:hover) {
+  fill: $sapphire;
+  stroke: #0039a7;
+}
+
+.tooltipContainer {
+  background-color: white;
+  border: solid 1px $platinum;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 12px;
+  text-align: center;
+
+  .date {
+    color: $spanishGray;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .visitsContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .legend {
+    height: 6px;
+    width: 6px;
+    border-radius: 8px;
+    background-color: $sapphire;
+    margin-right: 5px;
+  }
+
+  .label {
+    margin-right: 15px;
+  }
+}

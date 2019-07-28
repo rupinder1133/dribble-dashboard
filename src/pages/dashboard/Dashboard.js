@@ -1,9 +1,9 @@
 import React from 'react';
-import {Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import classNames from 'classnames';
 import Widget from "../../components/widget/Widget";
 import styles from './dashboard.module.scss';
 import Dropdown from "../../components/dropdown/Dropdown";
+import DailyVisitorsChart from "../../components/dailyVisitorsChart/DailyVisitorsChart";
 
 const months = [
   {value: 'jan', label: 'January'},
@@ -32,23 +32,6 @@ const data = [...Array(31)].map((e, index) => ({
   y: Math.round(Math.random() * (8500 - 1500) + 1500),
 }));
 
-
-const tickFormatter = (value) => value !== 1 ? `${value / 1000}K` : '';
-
-const renderTooltip = ({active, payload, label}) =>
-    (
-        <If condition={active}>
-          <div className={styles.tooltipContainer}>
-            <div className={styles.date}>{label}</div>
-            <div className={styles.visitsContainer}>
-              <div className={styles.legend}/>
-              <div className={styles.label}>Visitors</div>
-              <div><strong>{payload[0].value}</strong></div>
-            </div>
-          </div>
-        </If>
-    );
-
 const Dashboard = () => {
   return (
       <div>
@@ -69,34 +52,14 @@ const Dashboard = () => {
             </div>
           </div>
           <div className={styles.chartContainer}>
-            <ResponsiveContainer width="100%" height={200} className="dailyVisitorsChartContainer">
-              <BarChart data={data} barSize={12}>
-                <CartesianGrid
-                    stroke="#e2e5ee"
-                    vertical={false}
-                />
-                <XAxis
-                    dataKey="x"
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{fill: '#93949a', fontSize: 10}}
-                    tickMargin={5}
-                />
-                <YAxis
-                    ticks={[1, 3000, 6000, 9000]}
-                    tickFormatter={tickFormatter}
-                    orientation="right"
-                    axisLine={false}
-                    tickLine={{stroke: '#e2e5ee'}}
-                    tickSize={18}
-                    width={25}
-                    tick={{fill: '#93949a', fontSize: 10, dy: 15}}
-                    tickMargin={-16}
-                />
-                <Tooltip cursor={false} content={renderTooltip}/>
-                <Bar dataKey="y" fill="#1D68D5"/>
-              </BarChart>
-            </ResponsiveContainer>
+            <DailyVisitorsChart
+                data={data}
+                month="December"
+                year="2018"
+                height={200}
+                ticks={[0, 3000, 6000, 9000]}
+                domain={[0, 9000]}
+            />
           </div>
         </Widget>
       </div>
