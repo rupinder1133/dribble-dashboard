@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dribble-dashboard/precache-manifest.da5ea148b781d236108b76f00f385692.js"
+  "/dribble-dashboard/precache-manifest.b1f2b3c1b93edd9be6d01512341decfc.js"
 );
 
 self.addEventListener('message', (event) => {
