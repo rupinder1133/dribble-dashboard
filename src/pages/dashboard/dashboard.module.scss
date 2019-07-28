@@ -1,8 +1,5 @@
 @import '../../styles/styleVariables';
 
-.headerWidget {
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -30,4 +27,11 @@
   min-height: 240px;
   display: flex;
   align-items: center;
+}
+
+.smallWidgets {
+  display: flex;
+  margin-top: 32px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

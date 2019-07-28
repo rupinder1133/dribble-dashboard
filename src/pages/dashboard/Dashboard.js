@@ -5,6 +5,7 @@ import styles from './dashboard.module.scss';
 import Dropdown from "../../components/dropdown/Dropdown";
 import DailyVisitorsChart from "../../components/dailyVisitorsChart/DailyVisitorsChart";
 import Loader from "../../components/loader/Loader";
+import SmallAreaChartWidget from "../../components/smallAreaChart/SmallAreaChartWidget";
 
 const months = [
   {value: 'jan', label: 'January'},
@@ -65,7 +66,7 @@ class Dashboard extends Component {
 
     return (
         <div>
-          <Widget className={styles.headerWidget}>
+          <Widget>
             <div className={styles.header}>
               <strong>Daily Visitors</strong>
               <div className={styles.filterOptions}>
@@ -96,6 +97,13 @@ class Dashboard extends Component {
               </Loader>
             </div>
           </Widget>
+
+          <div className={styles.smallWidgets}>
+              <SmallAreaChartWidget title="realtime users" value={56} swing={9.8} stroke="#1e69d4" fill="#e7eff9"/>
+              <SmallAreaChartWidget title="total visits" value={Intl.NumberFormat('en-IN').format(54598)} swing={-11.9} stroke="#40ac4f" fill="#eaf6ec"/>
+              <SmallAreaChartWidget title="bounce rate" value="73.67 %" swing={12.2} stroke="#7269f0" fill="#efeefd"/>
+              <SmallAreaChartWidget title="visit duration" value="1m 4s" swing={19.6} stroke="#f9d169" fill="#fefaef"/>
+          </div>
         </div>
     )
   }
