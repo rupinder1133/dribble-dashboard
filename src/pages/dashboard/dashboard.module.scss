@@ -27,4 +27,7 @@
 
 .chartContainer {
   padding: 20px;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
 }

@@ -41,7 +41,7 @@ class Dropdown extends Component {
 
     this.optionsRef.style.maxHeight = `${(maxOptions * optionHeight) + optionHeight / 2}px`;
     this.containerRef.style.minWidth = `${maxOptionWidth + 30}px`;
-    this.setState({isOpen: false, expandOptionsToFullWidth: true });
+    this.setState({isOpen: false, expandOptionsToFullWidth: true});
   }
 
   toggleOpen = () => {
@@ -73,8 +73,10 @@ class Dropdown extends Component {
       onClick,
     } = this.props;
 
-    this.setState({selectedOptionIndex: index}, this.toggleOpen);
-    onClick && onClick(options[index].value, index);
+    if (this.state.selectedOptionIndex !== index) {
+      this.setState({selectedOptionIndex: index}, this.toggleOpen);
+      onClick && onClick(options[index].value, index);
+    }
   };
 
   render() {
@@ -95,10 +97,12 @@ class Dropdown extends Component {
     return (
         <div
             className={classNames(styles.select, className)}
-            ref={ref => {this.containerRef = ref;}}
+            ref={ref => {
+              this.containerRef = ref;
+            }}
         >
           <Button
-              className={classNames(styles.placeholder, { [styles.fullWidth]: expandOptionsToFullWidth })}
+              className={classNames(styles.placeholder, {[styles.fullWidth]: expandOptionsToFullWidth})}
               onClick={this.toggleOpen}
           >
             <div className={styles.placeholderLabel}>{effectivePlaceholder}</div>
@@ -113,7 +117,7 @@ class Dropdown extends Component {
             {options.map((option, index) =>
                 <Button
                     key={option.value}
-                    className={classNames(styles.option, { [styles.fullWidth]: expandOptionsToFullWidth })}
+                    className={classNames(styles.option, {[styles.fullWidth]: expandOptionsToFullWidth})}
                     onClick={(e) => this.selectOption(e, index)}
                 >
                   {option.label}
@@ -124,6 +128,7 @@ class Dropdown extends Component {
     )
   }
 }
+
 Dropdown.defaultProps = {
   maxOptions: 5,
 };
