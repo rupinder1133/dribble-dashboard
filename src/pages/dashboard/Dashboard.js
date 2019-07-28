@@ -33,7 +33,7 @@ const data = [...Array(31)].map((e, index) => ({
 }));
 
 
-const tickFormatter = (value) => `${value / 1000}k`;
+const tickFormatter = (value) => value !== 1 ? `${value / 1000}K` : '';
 
 const Dashboard = () => {
   return (
@@ -60,7 +60,6 @@ const Dashboard = () => {
                 <CartesianGrid
                     stroke="#e2e5ee"
                     vertical={false}
-                    className="ola"
                 />
                 <XAxis
                     dataKey="x"
@@ -70,14 +69,15 @@ const Dashboard = () => {
                     tickMargin={5}
                 />
                 <YAxis
-                    ticks={[3000, 6000, 9000]}
+                    ticks={[1, 3000, 6000, 9000]}
                     tickFormatter={tickFormatter}
                     orientation="right"
                     axisLine={false}
-                    tickLine={false}
-                    width={20}
-                    className={styles.font}
-                    tick={{fill: '#93949a', fontSize: 10}}
+                    tickLine={{stroke: '#e2e5ee'}}
+                    tickSize={18}
+                    width={25}
+                    tick={{fill: '#93949a', fontSize: 10, dy: 15}}
+                    tickMargin={-16}
                 />
                 <Tooltip cursor={false}/>
                 <Bar dataKey="y" fill="#1D68D5"/>

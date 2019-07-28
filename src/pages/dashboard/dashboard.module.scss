@@ -30,9 +30,5 @@
 }
 
 :global(.dailyVisitorsChartContainer .recharts-cartesian-grid-horizontal line:nth-last-child(2)) {
-  stroke-opacity: 0 !important;
-}
-
-.font {
-  stroke: red;
+  stroke-opacity: 0;
 }
