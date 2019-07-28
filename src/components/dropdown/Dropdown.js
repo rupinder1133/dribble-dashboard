@@ -24,9 +24,24 @@ class Dropdown extends Component {
     const selectedOptionIndex = mayBeSelectedOptionIndex === -1 ? 0 : mayBeSelectedOptionIndex;
 
     this.state = {
-      isOpen: false,
+      isOpen: true,
       selectedOptionIndex,
+      expandOptionsToFullWidth: false,
     };
+  }
+
+  componentDidMount() {
+    const {maxOptions} = this.props;
+
+    const optionHeight = this.optionsRef.children[0].clientHeight;
+    const maxOptionWidth = Array.from(this.optionsRef.children)
+        .map(o => o.clientWidth)
+
+        .reduce((max, value) => max > value ? max : value, 0);
+
+    this.optionsRef.style.maxHeight = `${(maxOptions * optionHeight) + optionHeight / 2}px`;
+    this.containerRef.style.minWidth = `${maxOptionWidth + 30}px`;
+    this.setState({isOpen: false, expandOptionsToFullWidth: true });
   }
 
   toggleOpen = () => {
@@ -72,36 +87,46 @@ class Dropdown extends Component {
     const {
       selectedOptionIndex,
       isOpen,
+      expandOptionsToFullWidth,
     } = this.state;
 
     const effectivePlaceholder = placeHolder || options[selectedOptionIndex].label;
 
     return (
-        <div className={classNames(styles.select, className)}>
+        <div
+            className={classNames(styles.select, className)}
+            ref={ref => {this.containerRef = ref;}}
+        >
           <Button
-              className={styles.placeholder}
+              className={classNames(styles.placeholder, { [styles.fullWidth]: expandOptionsToFullWidth })}
               onClick={this.toggleOpen}
           >
             <div className={styles.placeholderLabel}>{effectivePlaceholder}</div>
             {isOpen ? openIcon : closedIcon}
           </Button>
-          <If condition={isOpen}>
-            <div className={classNames(styles.options)}>
-              {options.map((option, index) =>
-                  <Button
-                      key={option.value}
-                      className={styles.option}
-                      onClick={(e) => this.selectOption(e, index)}
-                  >
-                    {option.label}
-                  </Button>
-              )}
-            </div>
-          </If>
+          <div
+              className={classNames(styles.options, {[styles.isOpen]: isOpen})}
+              ref={ref => {
+                this.optionsRef = ref;
+              }}
+          >
+            {options.map((option, index) =>
+                <Button
+                    key={option.value}
+                    className={classNames(styles.option, { [styles.fullWidth]: expandOptionsToFullWidth })}
+                    onClick={(e) => this.selectOption(e, index)}
+                >
+                  {option.label}
+                </Button>
+            )}
+          </div>
         </div>
     )
   }
 }
+Dropdown.defaultProps = {
+  maxOptions: 5,
+};
 
 Dropdown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({
@@ -110,6 +135,7 @@ Dropdown.propTypes = {
   })),
   selectedValue: PropTypes.string,
   className: PropTypes.string,
+  maxOptions: PropTypes.number.isRequired,
 };
 
 export default Dropdown;

@@ -14,7 +14,6 @@ const Header = () => {
         <strong>Dashboard</strong>
         <Dropdown
             options={languageOptions}
-            className={styles.languageSelect}
         />
       </header>
   )
