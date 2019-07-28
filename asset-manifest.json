@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dribble-dashboard/static/css/main.568ecde3.chunk.css",
-    "main.js": "/dribble-dashboard/static/js/main.b771e31a.chunk.js",
-    "main.js.map": "/dribble-dashboard/static/js/main.b771e31a.chunk.js.map",
+    "main.css": "/dribble-dashboard/static/css/main.4374c717.chunk.css",
+    "main.js": "/dribble-dashboard/static/js/main.f61dd3d3.chunk.js",
+    "main.js.map": "/dribble-dashboard/static/js/main.f61dd3d3.chunk.js.map",
     "runtime~main.js": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js",
     "runtime~main.js.map": "/dribble-dashboard/static/js/runtime~main.f115c8ca.js.map",
     "static/css/2.dbbda6ad.chunk.css": "/dribble-dashboard/static/css/2.dbbda6ad.chunk.css",
-    "static/js/2.4fee9933.chunk.js": "/dribble-dashboard/static/js/2.4fee9933.chunk.js",
-    "static/js/2.4fee9933.chunk.js.map": "/dribble-dashboard/static/js/2.4fee9933.chunk.js.map",
+    "static/js/2.502e8f85.chunk.js": "/dribble-dashboard/static/js/2.502e8f85.chunk.js",
+    "static/js/2.502e8f85.chunk.js.map": "/dribble-dashboard/static/js/2.502e8f85.chunk.js.map",
     "index.html": "/dribble-dashboard/index.html",
-    "precache-manifest.15b0e7da8d9d2aa0fadeb89a2b8e7e77.js": "/dribble-dashboard/precache-manifest.15b0e7da8d9d2aa0fadeb89a2b8e7e77.js",
+    "precache-manifest.1e850d5d14beecfaf7be51beb09f5ae1.js": "/dribble-dashboard/precache-manifest.1e850d5d14beecfaf7be51beb09f5ae1.js",
     "service-worker.js": "/dribble-dashboard/service-worker.js",
     "static/css/2.dbbda6ad.chunk.css.map": "/dribble-dashboard/static/css/2.dbbda6ad.chunk.css.map",
-    "static/css/main.568ecde3.chunk.css.map": "/dribble-dashboard/static/css/main.568ecde3.chunk.css.map",
+    "static/css/main.4374c717.chunk.css.map": "/dribble-dashboard/static/css/main.4374c717.chunk.css.map",
     "static/media/flag-icon.css": "/dribble-dashboard/static/media/zw.ad4ad36d.svg",
     "static/media/profile.module.scss": "/dribble-dashboard/static/media/profile_pic.247889bf.png"
   }
