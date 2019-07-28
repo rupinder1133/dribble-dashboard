@@ -22,6 +22,10 @@ $borderRadius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover {
+    background-color: $platinum;
+  }
 }
 
 .placeholderLabel {
@@ -44,9 +48,20 @@ $borderRadius: 5px;
   @extend .optionCommonStyle;
   display: block;
   width: 100%;
+  border-radius: 0;
 
   &:hover {
     background-color: $platinum;
+  }
+
+  &:first-child {
+    border-top-left-radius: $borderRadius - 2px;
+    border-top-right-radius: $borderRadius - 2px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $borderRadius - 2px;
+    border-bottom-right-radius: $borderRadius - 2px;
   }
 }
 
