@@ -37,3 +37,34 @@
   fill: #1A56AD;
   stroke: #0039A7;
 }
+
+.tooltipContainer {
+  background-color: white;
+  border: solid 1px $platinum;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+
+  .date {
+    color: $spanishGray;
+    text-transform: uppercase;
+  }
+
+  .visitsContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .legend {
+    height: 4px;
+    width: 4px;
+    border-radius: 8px;
+    background-color: #1A56AD;
+    margin-right: 5px;
+  }
+
+  .label {
+    margin-right: 15px;
+  }
+}

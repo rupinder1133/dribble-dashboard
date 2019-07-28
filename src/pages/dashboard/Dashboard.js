@@ -35,6 +35,20 @@ const data = [...Array(31)].map((e, index) => ({
 
 const tickFormatter = (value) => value !== 1 ? `${value / 1000}K` : '';
 
+const renderTooltip = ({active, payload, label}) =>
+    (
+        <If condition={active}>
+          <div className={styles.tooltipContainer}>
+            <div className={styles.date}>{label}</div>
+            <div className={styles.visitsContainer}>
+              <div className={styles.legend}/>
+              <div className={styles.label}>Visitors</div>
+              <div><strong>{payload[0].value}</strong></div>
+            </div>
+          </div>
+        </If>
+    );
+
 const Dashboard = () => {
   return (
       <div>
@@ -79,7 +93,7 @@ const Dashboard = () => {
                     tick={{fill: '#93949a', fontSize: 10, dy: 15}}
                     tickMargin={-16}
                 />
-                <Tooltip cursor={false}/>
+                <Tooltip cursor={false} content={renderTooltip}/>
                 <Bar dataKey="y" fill="#1D68D5"/>
               </BarChart>
             </ResponsiveContainer>
