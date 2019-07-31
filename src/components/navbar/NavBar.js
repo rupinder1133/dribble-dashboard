@@ -60,7 +60,7 @@ const NavBar = () => {
           <FontAwesomeIcon icon={faHome}/>
         </Button>
         <div className={classNames(styles.option)}><Profile/></div>
-        <div className={styles.scrollable}>
+        <div className={classNames(styles.option, styles.scrollable)}>
           {
             navBarOptions.map(option => (
                 <div className={classNames(styles.option, styles.secondaryOption)} key={option.header.label}>
@@ -69,6 +69,10 @@ const NavBar = () => {
             ))
           }
           <div className={classNames(styles.option, styles.secondaryOption)}><RecentlyViewed/></div>
+        </div>
+        <div className={classNames(styles.option, styles.footer)}>
+          <div className={styles.footerItem}>Page: <strong>dribble.com/janlosert</strong></div>
+          <div className={classNames(styles.footerItem, styles.secondary)}>567839-1180</div>
         </div>
       </nav>
   )

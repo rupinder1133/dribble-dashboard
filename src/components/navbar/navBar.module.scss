@@ -16,9 +16,6 @@ nav {
 }
 
 .option {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-sizing: border-box;
   border-bottom: solid 1px $platinum;
   border-radius: 0;
@@ -31,9 +28,28 @@ nav {
 .secondaryOption {
   margin: 0 28px;
   font-size: 14px;
+  text-align: left;
 }
 
 .scrollable {
+  flex-direction: column;
+  align-items: flex-start;
   flex: 1;
   overflow: auto;
+}
+
+.footer {
+  padding: 16px;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.footerItem {
+  & + & {
+    margin-top: 8px;
+  }
+}
+
+.secondary {
+  color: $spanishGray;
 }
