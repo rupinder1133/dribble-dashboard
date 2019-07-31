@@ -1,0 +1,19 @@
+@import '../../styles/styleVariables';
+
+.swing {
+  font-size: 10px;
+  color: #e34b36;
+}
+
+.icon {
+  margin-left: 5px;
+  transform: rotate(180deg);
+}
+
+.isPositive {
+  color: #47a653;
+
+  .icon {
+    transform: none;
+  }
+}
