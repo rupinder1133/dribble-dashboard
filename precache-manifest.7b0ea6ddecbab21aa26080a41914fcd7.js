@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1fa73ab810ebc48dab0e396b2431864f",
+    "revision": "9b9bae23ec7c593e5d3c5bf6ca649146",
     "url": "/dribble-dashboard/index.html"
   },
   {
-    "revision": "f4f2c9daa6da3aea9426",
+    "revision": "092fd2b6e8fa7dba839b",
     "url": "/dribble-dashboard/static/css/2.dbbda6ad.chunk.css"
   },
   {
-    "revision": "4d4e2822e56376889006",
-    "url": "/dribble-dashboard/static/css/main.0d512901.chunk.css"
+    "revision": "12001789dadc6b63bf80",
+    "url": "/dribble-dashboard/static/css/main.c04d37f4.chunk.css"
   },
   {
-    "revision": "f4f2c9daa6da3aea9426",
-    "url": "/dribble-dashboard/static/js/2.a0fbc716.chunk.js"
+    "revision": "092fd2b6e8fa7dba839b",
+    "url": "/dribble-dashboard/static/js/2.0efe024d.chunk.js"
   },
   {
-    "revision": "4d4e2822e56376889006",
-    "url": "/dribble-dashboard/static/js/main.bcd93e2e.chunk.js"
+    "revision": "12001789dadc6b63bf80",
+    "url": "/dribble-dashboard/static/js/main.03168c28.chunk.js"
   },
   {
     "revision": "48d9490ec1e8d4443b78",
